@@ -50,17 +50,12 @@ class Pet():
         self.boredom = max(0, self.boredom - self.boredom_decrement)
         print("\nBoredom reduced")
 
-
 class Tiger(Pet):
-    sound = []
-
     def __init__(self, name="Pluto"):
         Pet.__init__(self, name="Ruby")
         self.sound = "Grr"
 
 class Snake(Pet):
-    sound = []
-
     def __init__(self, name="Snowy"):
         Pet.__init__(self, name="Silky")
         self.sound = "Hsss"
@@ -68,9 +63,7 @@ class Snake(Pet):
 pick = int(input("SELECT THE PET\n1)Tiger(Ruby)\n2)Snake(Silky)\n"))
 if (pick == 2):
     p1 = Snake()
-    p2 = Tiger()
 elif (pick == 1):
-    p2 = Snake()
     p1 = Tiger()
 else:
     print("WRONG INPUT")
@@ -85,5 +78,4 @@ while x == "y" or x == "Y":
     elif (cmd == 3):
         p1.feed()
     p1.clock_tick()
-    p2.clock_tick()
     x = input("DO YOU WANT TO CONTINUE(y/n)")
